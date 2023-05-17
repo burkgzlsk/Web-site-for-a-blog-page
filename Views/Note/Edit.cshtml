@@ -1,0 +1,44 @@
+﻿@{
+    ViewData["Title"] = "Yazı Güncelle";
+}
+
+<div class="row mb-4">
+	<div class="col">
+		<h3 class="display-4 border-bottom">@ViewData["Title"]</h3>
+	</div>
+</div>
+
+<div class="row mb-4">
+	<div class="col-4">
+		<form>
+			<div class="mb-3">
+				<label for="Category" class="form-label">Kategori</label>
+				<select id="Category" class="form-control">
+					<option selected>Seçiniz</option>
+					<option value="1">Kategori 1</option>
+					<option value="2">Kategori 2</option>
+				</select>
+				<div class="mb-3">
+					<label for="Tittle" class="form-label">Başlık</label>
+					<input type="text" class="form-control" id="Tittle" placeholder="@TextData.GetSentence()">
+				</div>
+			</div>
+			<div class="mb-3">
+				<label for="Summary" class="form-label">Özet</label>
+				<textarea id="Summary" class="form-control" rows="2" placeholder="@TextData.GetSentences(2)"> </textarea>
+			</div>
+			<div class="mb-3">
+				<label for="Details" class="form-label">Detay</label>
+				<textarea id="Details" class="form-control" rows="6" placeholder="@TextData.GetSentences(6)"> </textarea>
+			</div>
+			<div class="mb-3 form-check">
+				<input type="checkbox" class="form-check-input" id="isdraft">
+				<label class="form-check-label" for="isdraft">Taslak</label>
+			</div>
+			<div>
+				<button type="submit" class="btn btn-primary btn-sm"><i class="fa fa-save me-2"></i>Kaydet</button>
+				<a class="btn btn-secondary btn-sm" asp-action="Index"><i class="fa fa-arrow-left me-2"></i>Listeye Dön</a>
+			</div>
+		</form>
+	</div>
+</div>

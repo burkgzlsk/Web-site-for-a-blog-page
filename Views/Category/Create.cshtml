@@ -1,0 +1,30 @@
+﻿@{
+    ViewData["Title"] = "Kategori oluştur";
+}
+
+
+<div class="row mb-4">
+	<div class="col">
+		<h3 class="display-4 border-bottom">@ViewData["Title"]</h3>
+	</div>
+</div>
+
+<div class="row mb-4">
+	<div class="col-4">
+		<form>
+			<div class="mb-3">
+				<label for="fullname" class="form-label">Kategori adı</label>
+				<input type="text" class="form-control" id="CategoryName" placeholder="@NameData.GetCompanyName()">
+			</div>
+			<div class="mb-3">
+				<label for="user" class="form-label">Kategori Açıklama</label>
+				<textarea class="form-control" id="CategoryDesc"cols="3" placeholder="@TextData.GetSentence()"> </textarea>
+				@*@<div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>*@
+			</div>
+			<div>
+				<button type="submit" class="btn btn-primary btn-sm"><i class="fa fa-plus me-2"></i>Oluştur</button>
+				<a class="btn btn-secondary btn-sm" asp-action="Index"><i class="fa fa-arrow-left me-2"></i>Listeye Dön</a>
+			</div>
+		</form>
+	</div>
+</div>

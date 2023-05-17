@@ -1,0 +1,49 @@
+﻿@{
+    ViewData["Title"] = "Kullanıcı oluştur";
+}
+
+
+<div class="row mb-4">
+	<div class="col">
+		<h3 class="display-4 border-bottom">@ViewData["Title"]</h3>
+	</div>
+</div>
+
+<div class="row mb-4">
+	<div class="col-4">
+		<form>
+			<div class="mb-3">
+				<label for="Fullname" class="form-label">Ad Soyad</label>
+				<input type="text" class="form-control" id="Fullname" placeholder="@NameData.GetFullName()">
+			</div>
+			<div class="mb-3">
+				<label for="Username" class="form-label">Kullanıcı Adı</label>
+				<input type="text" class="form-control" id="Username" placeholder="@NameData.GetTitleName()">
+			</div>
+			<div class="mb-3">
+				<label for="Email" class="form-label">E-posta Adresi</label>
+				<input type="text" class="form-control" id="Email" placeholder="@NetworkData.GetEmail()">
+			</div>
+			<div class="mb-3">
+				<label for="Password" class="form-label">Şifre</label>
+				<input type="password" class="form-control" id="Password" placeholder="@TextData.GetNumeric(6)">
+			</div>
+			<div class="mb-3">
+				<label for="RePassword" class="form-label">Şifre Tekrar</label>
+				<input type="password" class="form-control" id="RePassword" placeholder="@TextData.GetNumeric(6)">
+			</div>
+			<div class="mb-3 form-check">
+				<input type="checkbox" class="form-check-input" id="isactive">
+				<label class="form-check-label" for="isactive">Aktif</label>
+			</div>
+			<div class="mb-3 form-check">
+				<input type="checkbox" class="form-check-input" id="isadmin">
+				<label class="form-check-label" for="isadmin">Yönetici</label>
+			</div>
+			<div>
+				<button type="submit" class="btn btn-primary btn-sm"><i class="fa fa-plus me-2"></i>Oluştur</button>
+				<a class="btn btn-secondary btn-sm" asp-action="Index"><i class="fa fa-arrow-left me-2"></i>Listeye Dön</a>
+			</div>
+		</form>
+	</div>
+</div>
